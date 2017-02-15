@@ -1,4 +1,4 @@
-sap.ui.define([], function() {
+sap.ui.define(["sap/ui/demo/bulletinboard/model/DateFormatter"], function(DateFormatter) {
 	"use strict";
 
 	return {
@@ -15,6 +15,11 @@ sap.ui.define([], function() {
 			}
 
 			return parseFloat(sValue).toFixed(2);
+		},
+		date: function(date) {
+			return new DateFormatter({
+				now: Date.now
+			}).format(date);
 		},
 		/**
 		 * Defines a value state based on the price
