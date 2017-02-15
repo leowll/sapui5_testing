@@ -11,6 +11,12 @@ sap.ui.require(
 			// Assertions
 			Then.onThePostPage.theTitleShouldDisplayTheName("Jeans");
 		});
+		opaTest("Should select the statistics tab", function (Given, When, Then) {
+			// Actions
+			When.onThePostPage.iPressOnTheTabWithTheKey("statistics");
+			// Assertions
+			Then.onThePostPage.iShouldSeeTheViewCounter();
+		});
 		opaTest("Should go back to the TablePage", function (Given, When, Then) {
 			// Actions
 			When.onThePostPage.iPressTheBackButton();
@@ -24,13 +30,6 @@ sap.ui.require(
 			// Assertions
 			Then.onThePostPage.theTitleShouldDisplayTheName("Jeans").
 				and.iTeardownMyAppFrame();
-		});
-		opaTest("Should select the statistics tab", function (Given, When, Then) {
-			// Actions
-			When.onThePostPage.iPressOnTheTabWithTheKey("statistics");
-			// Assertions
-			Then.onThePostPage.iShouldSeeTheViewCounter()
-				.and.iTeardownMyAppFrame();
 		});
 	}
 );
