@@ -25,5 +25,12 @@ sap.ui.require(
 			Then.onThePostPage.theTitleShouldDisplayTheName("Jeans").
 				and.iTeardownMyAppFrame();
 		});
+		opaTest("Should select the statistics tab", function (Given, When, Then) {
+			// Actions
+			When.onThePostPage.iPressOnTheTabWithTheKey("statistics");
+			// Assertions
+			Then.onThePostPage.iShouldSeeTheViewCounter()
+				.and.iTeardownMyAppFrame();
+		});
 	}
 );
