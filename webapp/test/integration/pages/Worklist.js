@@ -40,16 +40,6 @@ sap.ui.require([
 							},
 							errorMessage: "No list item with the id " + sId + " was found."
 						});
-					},
-					iShouldSeeTheTable: function () {
-						return this.waitFor({
-							id: sTableId,
-							viewName: sViewName,
-							success: function () {
-								Opa5.assert.ok(true, "The table is visible");
-							},
-							errorMessage: "Was not able to see the table."
-						});
 					}
 				},
 				assertions: {
@@ -83,6 +73,16 @@ sap.ui.require([
 								Opa5.assert.ok(true, "The table header has 23 items");
 							},
 							errorMessage: "The Table's header does not container the number of items: 23"
+						});
+					},
+					iShouldSeeTheTable: function () {
+						return this.waitFor({
+							id: sTableId,
+							viewName: sViewName,
+							success: function () {
+								Opa5.assert.ok(true, "The table is visible");
+							},
+							errorMessage: "Was not able to see the table."
 						});
 					}
 
