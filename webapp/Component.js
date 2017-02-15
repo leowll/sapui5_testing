@@ -25,6 +25,9 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+			
+			// allow saving values to the OData model
+			this.getModel().setDefaultBindingMode("TwoWay");
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
