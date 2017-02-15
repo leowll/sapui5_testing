@@ -1,4 +1,4 @@
-# sapui5_testing
+# Intro
 
 In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. 
 
